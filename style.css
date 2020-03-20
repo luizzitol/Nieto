@@ -92,10 +92,12 @@ margin: 0 0 0 auto;
     display: flex;
     justify-content: center;
     align-content: flex-end;
-    height: 50vh;
+    height: 500px;
 }
 .covercover{
-    width: 70rem;
+    margin-top: 60px;
+    width: 600px;
+    height: 400px;
 }
 
 
@@ -179,3 +181,4 @@ footer{
     background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
     background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
 }
+/
