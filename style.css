@@ -1,3 +1,181 @@
-h1{
-	border: 2px solid red
+body{
+    margin: 0;
+}
+li{
+    padding: 0;
+    margin: 0;
+    align-self: center;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+/*NAV*/
+
+.sticky{
+    position: fixed;
+    width: 100%;
+}
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0; 
+  background: deepskyblue;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 8px 30px;
+  font-size: 180%;
+}
+
+.navigation a:hover {
+  background: #1565C0;
+}
+
+
+.navbutton{
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 4px 10px;
+}
+
+
+.push{
+margin: 0 0 0 auto;
+
+}
+
+/*navbar when small screens*/
+
+@media all and (max-width: 800px) {
+  .navigation a {
+    font-size: 100%;
+  }
+}
+
+@media all and (max-width: 570px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    font-size: 100%;
+    padding: 3px;
+  }
+  .push {
+    margin: 0;
+  }
+  .navbutton{
+    border: 2px solid;
+    border-radius: 4px;
+            }
+
+    .sticky{
+        position: static;
+        width: 100%;
+    }
+}
+
+/***********************************************************************
+ *  Cover
+ **********************************************************************/
+.cover{
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    height: 80vh;
+}
+.covercover{
+    width: 70rem;
+}
+
+
+/***********************************************************************
+Proyect Grid
+ **********************************************************************/
+p{
+    margin: 0;
+}
+
+.proyect-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.box{
+    display:flex;
+    flex-flow: column;
+    padding: 50px 50px 10px 50px;
+    margin:20px;
+    border: solid 3px white;
+    border-radius: 20px;
+    justify-content: space-between;
+    height: 250px;
+    align-content: space-between;
+
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.box > img{
+    width: 140px;
+    height: 140px;
+    align-self: center;
+}
+
+.proyect-grid a{
+    text-decoration: none;
+
+}
+
+.box > p {
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+ /***********************************************************************
+}
+footer
+ **********************************************************************/
+footer{
+    text-align: center;
+    font-size: 150%;
+    height: 2vh;
+    padding: 15px;
+}
+ /***********************************************************************
+ *  Yellow Background
+ **********************************************************************/
+.yellow{
+    background: #F3AAAA; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+.blue{
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
 }
