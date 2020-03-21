@@ -11,6 +11,10 @@ ul{
     margin: 0;
 }
 
+h1{
+  margin: 0px;
+  padding-top: 80px;
+}
 /*NAV*/
 
 .sticky{
