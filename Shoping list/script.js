@@ -1,6 +1,8 @@
-var button = document.getElementById("enter");
+var button = document.getElementById("add");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+
+
 
 
 function inputLength() {
@@ -9,25 +11,32 @@ function inputLength() {
 
 function createListElement() {
 	var li = document.createElement("li");
+	// adds style to the list items
 	li.classList.add("listItem");
-	li.addEventListener("click", markDone)
+	li.addEventListener("click", markListItem);
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
 	input.value = "";
 
-	function markDone () {
-	li.classList.toggle("done");
+	// creates the line-through
+	function markListItem() {
+		li.classList.toggle("done");
 	}
 
+	// create a delete button
 	var btnDel = document.createElement("button");
+	// style for the delete button
+	btnDel.classList.add("deleteBtn");
 	btnDel.appendChild(document.createTextNode("X"));
-	btnDel.addEventListener("click", removeLi);
 	li.appendChild(btnDel);
+	btnDel.addEventListener("click", deleteListItem);
 
-	function removeLi() {
-		li.style.display = "none";
+	// adds display: none to the button
+	function deleteListItem() {
+		li.classList.add("delete");
 	}
-}
+} 
+// end of createListElement functi0n
 
 function addListAfterClick() {
 	if (inputLength() > 0) {
@@ -40,7 +49,6 @@ function addListAfterKeypress(event) {
 		createListElement();
 	}
 }
-
 
 button.addEventListener("click", addListAfterClick);
 
