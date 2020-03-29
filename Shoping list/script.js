@@ -1,8 +1,8 @@
 var button = document.getElementById("add");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-
-
+// var undo = document.getElementById("undo");
+// var backup;
 
 
 function inputLength() {
@@ -10,6 +10,7 @@ function inputLength() {
 }
 
 function createListElement() {
+	// backup = document.querySelector("ul").innerHTML;
 	var li = document.createElement("li");
 	// adds style to the list items
 	li.classList.add("listItem");
@@ -20,6 +21,7 @@ function createListElement() {
 
 	// creates the line-through
 	function markListItem() {
+		// backup = document.querySelector("ul").innerHTML;
 		li.classList.toggle("done");
 	}
 
@@ -33,6 +35,7 @@ function createListElement() {
 
 	// adds display: none to the button
 	function deleteListItem() {
+		// backup = document.querySelector("ul").innerHTML;
 		li.classList.add("delete");
 	}
 } 
@@ -50,6 +53,14 @@ function addListAfterKeypress(event) {
 	}
 }
 
+// function undoAction () {
+// 		console.log("undoing")
+// 		ul.innerHTML = backup;
+// 	}
+
+
 button.addEventListener("click", addListAfterClick);
+// undo.addEventListener("click", undoAction);
 
 input.addEventListener("keypress", addListAfterKeypress);
+
